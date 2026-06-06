@@ -4,6 +4,7 @@ import {
   InfoWindow,
   useJsApiLoader,
 } from "@react-google-maps/api";
+import api from "../services/api";
 
 import { useEffect, useState } from "react";
 import { getLieux } from "../services/lieuService";
