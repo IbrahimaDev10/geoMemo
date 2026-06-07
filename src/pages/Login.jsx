@@ -9,24 +9,25 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const connexion = async (e) => {
-    e.preventDefault();
+const connexion = async (e) => {
+  e.preventDefault();
 
-    try {
-         await api.post("/login", {
-             email,
-             password,
-         });
+  try {
+    const res = await api.post("/login", {
+      email,
+      password,
+    });
 
-      localStorage.setItem("token", res.data.token);
+    localStorage.setItem("token", res.data.token);
 
-      // REDIRECTION ICI 🔥
-      navigate("/map");
+    navigate("/map");
 
-    } catch (error) {
-      alert("Email ou mot de passe incorrect");
-    }
-  };
+  } catch (error) {
+    console.error(error);
+
+    alert("Email ou mot de passe incorrect");
+  }
+};
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
