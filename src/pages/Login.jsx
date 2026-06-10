@@ -17,23 +17,23 @@ export default function Home() {
           flex
           items-center
           justify-between
-          px-8
-          py-6
+          px-4
+          py-4
           border-b
           border-gray-300
           bg-white
         "
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
 
           <MapPin
-            size={34}
+            size={32}
             className="text-[rgb(0,162,232)]"
           />
 
           <span
             className="
-              text-2xl
+              text-xl
               font-bold
               text-[rgb(0,162,232)]
             "
@@ -91,7 +91,9 @@ export default function Home() {
 
     <h1
       className="
-        text-6xl
+        
+        md:text-3xl
+        xl:text-6xl
         font-extrabold
         text-gray-900
         mt-6
