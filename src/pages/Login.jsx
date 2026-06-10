@@ -45,16 +45,16 @@ export default function Home() {
 
         <a
           href={`${import.meta.env.VITE_API_URL}/auth/google/redirect`}
-        className="w-64
+        className="
         flex items-center 
-        justify-center gap-3 border rounded-xl py-3 hover:bg-gray-50 mt-4"
+        justify-center gap-3 border rounded-xl py-3 hover:bg-gray-50 mt-4 px-2"
         >
         <img
            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
            alt="Google"
            className="w-5 h-5"
          />
-          Continuer avec Google
+          Se connecter
         </a>
       </nav>
 
