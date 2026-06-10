@@ -10,6 +10,8 @@ export default function AddLieuModal({
   const [nom, setNom] = useState("");
   const [adresse, setAdresse] = useState("");
   const [description, setDescription] = useState("");
+  const [categorie, setCategorie]=useState("Autre");
+  const [is_favorite, setIs_favorite] = useState(0);
 
   const [loading, setLoading] = useState(false);
 
@@ -28,6 +30,8 @@ export default function AddLieuModal({
             description,
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
+            categorie,
+            is_favorite
           });
 
           setNom("");
@@ -108,6 +112,30 @@ export default function AddLieuModal({
               p-3
             "
           />
+          <label htmlFor="">Categorie</label>
+          <select
+            value={categorie}
+            onChange={(e) => setCategorie(e.target.value)}
+            className="w-full border rounded-xl p-3"
+          >
+            <option>Maison</option>
+            <option>Travail</option>
+            <option>Restaurant</option>
+            <option>École</option>
+            <option>Hôpital</option>
+            <option>Autre</option>
+          </select>
+
+            <label htmlFor="">Favoris</label>
+          <select
+            value={is_favorite}
+            onChange={(e) => setIs_favorite(e.target.value)}
+            className="w-full border rounded-xl p-3"
+          >
+            <option value='0'>non</option>
+            <option value='1'>oui</option>
+
+          </select>
 
           <textarea
             rows="4"

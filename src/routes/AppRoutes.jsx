@@ -8,13 +8,16 @@ import Parametres from "../pages/Parametres";
 
 import MainLayout from "../layouts/MainLayout";
 import ProtectedRoute from "../components/ProtectedRoute";
+import LoginSuccess from "../pages/LoginSuccess";
+import LoginError from "../pages/LoginError";
 
 export default function AppRoutes() {
   return (
     <Routes>
 
       <Route path="/" element={<Login />} />
-
+        <Route path="/login-success" element={<LoginSuccess />} />
+        <Route path="/login-error" element={<LoginError />} />
       <Route
         element={
           <ProtectedRoute>
@@ -26,6 +29,7 @@ export default function AppRoutes() {
         <Route path="/map" element={<MapPage />} />
         <Route path="/favoris" element={<Favoris />} /> 
         <Route path="/parametres" element={<Parametres />} />
+
       </Route>
 
     </Routes>

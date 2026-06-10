@@ -40,7 +40,7 @@ export default function Sidebar() {
     {
       name: "Enregistrer un lieu",
       icon: PlusCircle,
-      path: "/lieux",
+      path: "/",
     }
   ];
 
@@ -83,8 +83,8 @@ export default function Sidebar() {
         {/* Logo */}
         <div className="p-6 border-b">
 
-          <h1 className="text-3xl font-bold text-blue-600">
-            GeoMemo
+          <h1 className="text-3xl font-bold text-[rgb(0,162,232)]">
+            MemoLocal
           </h1>
 
           <p className="text-sm text-gray-500">
@@ -111,7 +111,7 @@ export default function Sidebar() {
 
                 ${
                   location.pathname === menu.path
-                    ? "bg-blue-600 text-white"
+                    ? "bg-[rgb(0,162,232)] text-white"
                     : "hover:bg-slate-100"
                 }
               `}

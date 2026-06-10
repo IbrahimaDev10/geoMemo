@@ -7,3 +7,7 @@ export const createLieu = (data) =>
 
 export const deleteLieu = (id) =>
   api.delete(`/lieux/${id}`);
+
+export const toggleFavorite = (id) => {
+  return api.put(`/lieux/${id}/favorite`);
+};

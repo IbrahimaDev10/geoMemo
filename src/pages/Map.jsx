@@ -7,7 +7,7 @@ export default function Map() {
   const [position, setPosition] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // 🆕 champs formulaire
+  //  champs formulaire
   const [nom, setNom] = useState("");
   const [description, setDescription] = useState("");
   const [adresse, setAdresse] = useState("");
